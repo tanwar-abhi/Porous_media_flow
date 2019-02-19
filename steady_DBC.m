@@ -34,7 +34,6 @@ while error > eps
         p = ones(size(X,1),1);
     end
     p_old = p;
-%     [K,f] = old_FEM_matrices_steady(X,T,referenceElement,Kv,p);
     [K,f] = FEM_matrices_steady(X,T,referenceElement,Kv,p);
     
     % SOLUTION OF THE LINEAR SYSTEM

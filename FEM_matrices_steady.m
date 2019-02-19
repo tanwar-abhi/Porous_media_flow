@@ -10,7 +10,6 @@ function [K,f]= FEM_matrices_steady(X,T,referenceElement,Kv,p,NBC)
 
 if nargin < 6
     NBC = ' ';
-%     referenceElement.nodes_nbc = 0;
 end
 
 nElem = size(T,1);
@@ -33,7 +32,7 @@ for ielem = 1:nElem
     f(Te) = f(Te) + fe;
    
 end
-% K = sparse(K);
+
 end
 
 
