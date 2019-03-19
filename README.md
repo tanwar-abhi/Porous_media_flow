@@ -14,39 +14,45 @@ The file names are structured such that a user/reader can intutively guess the i
 
 `main.m` :: This is the main file where the domain and phusical parameters for flow and user specific inputs are defined.
 
-`FEM_matrices_steady.m` , `FEM_matrices_transient.m` :: This function {sub file} solve and assembling, respective, element and global FEM matrices. This function is called everytime the element matrices is calculated and then it adds to the global stiffness matrix.
-
-`Quadrature.m` :: This function contains all the gauss quadratures used for the calculation of integrals.
-
-`ShapeFunc.m` :: Here linear and quadratic shape functions are defined which are called upon during element martix calculations.
-
 `rhs_element.m` :: Here RHS terms of the equation and source terms are defined for the subsequent, steady and trasnsient, cases.
 
 `Initial_Conditions.m` :: As per the name here initial conditions for the transient boundary value problem as defined.
 
 `Element_Neumann.m` :: This function imposes the Neumann boundary conditions on the subsequent elements.
 
+`Postprocessing.m` :: This function displays the time variation graphs, showing the gradual progression of pressure as the solution marches in time. 
+
+`steady_DBC.m` :: This file contains the numerical algorithm for solving the nonlinear steady case boundary value problem with only imposed Dirichlet boundary conditions.
+
+`steady_DBC_NBC.m` :: This file contains the numerical algorithm for solving the nonlinear steady case boundary value problem with imposed Dirichlet and Neumann boundary conditions.
+
+`transient_2BDF_DNBC.m` :: This file contains the numerical algorithms for solving nonlinear transient boundary value problem with both dirichlet and neumann boundary conditions.
+
+`transient_2BDF_DBC.m` :: This file contains the numerical algorithms for solving nonlinear transient boundary value problem with only imposed dirichlet boundary conditions.
+
+## Sub functions, helping functions Pre and Post-Processing
+
+These are the sub functions that are called upon by the main solver code, they are located within Functions directory and this path is added to solver.
+
+`cinput.m` :: This is just a function created for rendering text on screen asking for user inputs.
+
+`PlotMesh.m` :: This gives a visual representation of the mesh, elements and nodes.
+
+`SetReferenceElement.m` :: This function creates a structured element of all the user inputs and element numbers, node nubers and connectivities.
+
+`Quadrature.m` :: This function contains all the gauss quadratures used for the calculation of integrals.
+
 `CreateMesh.m` :: It discretize's the whole domain defined in `main.m` and creates the mesh.
 
+`ShapeFunc.m` :: Here linear and quadratic shape functions are defined which are called upon during element martix calculations.
+
+`FEM_matrices_steady.m` , `FEM_matrices_transient.m` :: This function {sub file} solve and assembling, respective, element and global FEM matrices. This function is called everytime the element matrices is calculated and then it adds to the global stiffness matrix.
 
 
 ## Case Setup
 * To solve steady and transient cases with differnet imposed boundary condition, multiple files where created which call in necessary functions. They subsequently contain algorithms for solving steady and tranisent problem.
 
 * Suffix **DBC** stands for Dirichlet Boundary Conditions and **NBC** stands for Neumann Boundary Conditions.
-
-
-
-## Sub functions, helping functions Pre and Post-Processing
-
-`cinput.m` :: This is just a function created for rendering text on screen asking for user inputs.
-
-`PlotMesh.m` :: This gives a visual representation of the mesh, elements and nodes.
-
-`Postprocessing.m` :: This function displays the time variation graphs, showing the gradual progression of pressure as the solution marches in time. 
-
-`SetReferenceElement.m` :: This function creates a structured element of all the user inputs and element numbers, node nubers and connectivities.
-
 
 
 # How to run the Solver

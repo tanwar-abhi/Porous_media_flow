@@ -1,6 +1,8 @@
 clear; clc;
 %close all;
 
+addpath('Functions')
+
 disp('This code solves the governing pressure equation for a compressible air flow in a porous media. ')
 disp(' ')
 elem = cinput('Select type of elements (default value=0) 0:Quadrilateral | 1:Triangular ',0);
