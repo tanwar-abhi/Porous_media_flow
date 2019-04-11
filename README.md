@@ -4,7 +4,7 @@
 
 The Porous_Media_Flow repository contains all the MATLAB code files and sub files that are required to run the FEM solver that was coded to simulate (both steady and transient) pressure driven airflow in a fibrous composite material.
 
-Different test cases are already defined for both steady and transient cases with various possible boundary conditions.  If a user wishes to change the boundary conditions other that what is already defined in solver, he/she can do so by changing boundary consitions in subsequent functions of steady and transient case.
+Different test cases are already defined for both steady and transient cases with various possible boundary conditions.  If a user wishes to change the boundary conditions other that what is already defined in solver, he/she can do so by changing boundary conditions in subsequent functions of steady and transient case.
 
 
 
@@ -12,7 +12,7 @@ Different test cases are already defined for both steady and transient cases wit
 
 The file names are structured such that a user/reader can intutively guess the internal structure and output of the files from reading name of the functions/files. For example:
 
-`main.m` :: This is the main file where the domain and phusical parameters for flow and user specific inputs are defined.
+`main.m` :: This is the main file where the domain and physical parameters for flow and user specific inputs are defined.
 
 `rhs_element.m` :: Here RHS terms of the equation and source terms are defined for the subsequent, steady and trasnsient, cases.
 
