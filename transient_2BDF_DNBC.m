@@ -69,7 +69,7 @@ for i = 1:ntStep
 %         err(iteration,i) = error;
         
         if error <= eps
-            disp('Solution Converged')
+            disp('Solution Converged');
 %             disp(['Solution Converged, it took ',num2str(iteration),' iterations.'])
         elseif iteration >= 1000
             error('Solution did not Converged');
@@ -81,7 +81,9 @@ for i = 1:ntStep
     end
 end
 
-
+disp(' ');
+disp('Calculations complete, now run Postprocessing file to view time graphs.');
+disp(' ');
 
 %%%%%%%%%%%%----POSTPROCESSING----%%%%%%%%%%%%%%
 % n = 24;             % No. of time plots of process.

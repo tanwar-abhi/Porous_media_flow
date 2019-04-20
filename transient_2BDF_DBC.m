@@ -80,7 +80,9 @@ for i = 1:ntStep
     end
 end
 
-
+disp(' ');
+disp('Calculations complete, now run Postprocessing file to view time graphs.');
+disp(' ');
 
 %%%%%%%%%%%%----POSTPROCESSING----%%%%%%%%%%%%%%
 % n = 24;             % No. of time plots of process.

@@ -43,8 +43,8 @@ Kv(2,1) = Kv(1,2); Kv(2,2) = 0.1;
 
 
 % Number of elements
-nx = 06;                  % in x-direction
-ny = 03;                  % in y-directions
+nx = 10;                  % in x-direction
+ny = 05;                  % in y-directions
 
 % Time control for Transient case
 tEnd = 5;                % Total time ({0,tEnd} in seconds)
