@@ -4,7 +4,7 @@
 
 The Porous_Media_Flow repository contains all the MATLAB code files and sub files that are required to run the FEM solver that was coded to simulate (both steady and transient) pressure driven airflow in a fibrous composite material.
 
-Different test cases are already defined for both steady and transient cases with various possible boundary conditions.  If a user wishes to change the boundary conditions other that what is already defined in solver, he/she can do so by changing boundary conditions in subsequent functions of steady and transient case.
+Different test cases are already defined for both steady and transient cases with various possible boundary conditions.  If a user wishes to change the boundary conditions other than what is already defined in solver, he/she can do so by changing boundary conditions in subsequent functions of steady and transient case.
 
 
 
@@ -19,8 +19,6 @@ The file names are structured such that a user/reader can intutively guess the i
 `Initial_Conditions.m` :: As per the name here initial conditions for the transient boundary value problem as defined.
 
 `Element_Neumann.m` :: This function imposes the Neumann boundary conditions on the subsequent elements.
-
-`Postprocessing.m` :: This function displays the time variation graphs, showing the gradual progression of pressure as the solution marches in time. 
 
 `steady_DBC.m` :: This file contains the numerical algorithm for solving the nonlinear steady case boundary value problem with only imposed Dirichlet boundary conditions.
 
@@ -43,6 +41,8 @@ These are the sub functions that are called upon by the main solver code, they a
 `Quadrature.m` :: This function contains all the gauss quadratures used for the calculation of integrals.
 
 `CreateMesh.m` :: It discretize's the whole domain defined in `main.m` and creates the mesh.
+
+`Postprocessing.m` :: This function displays the time variation graphs, showing the gradual progression of pressure as the solution marches in time. This file must be run only for the case of trasient problem after the solver finishes calculatin the values. A message would be displayed in screen promting the user to run this file.
 
 `ShapeFunc.m` :: Here linear and quadratic shape functions are defined which are called upon during element martix calculations.
 
